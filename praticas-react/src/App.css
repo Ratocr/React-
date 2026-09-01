@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  background: #111827;
+  color: white;
+}
+
+ header nav {
+  display: flex;
+  gap: 24px;
+}
+
+ header a {
+  color: white;
+  text-decoration: none;
+}
+
+ .banner {
+  padding: 80px 8%;
+  background: #f3f4f6;
+}
+
+ .produtos {
+  padding: 50px 8%;
+}
+
+ .lista-produtos {
+  display: flex;
+  gap: 20px;
+ }
