@@ -7,54 +7,70 @@ header {
   color: white;
 }
 
- header nav {
+header nav {
   display: flex;
   gap: 24px;
 }
 
- header a {
+header a {
   color: white;
   text-decoration: none;
 }
 
- .banner {
+.banner {
   padding: 80px 8%;
   background: #f3f4f6;
 }
 
- .produtos {
+.produtos {
   padding: 50px 8%;
 }
 
- .lista-produtos {
+.lista-produtos {
   display: flex;
   gap: 20px;
- }
+}
 
- .destaques {
-padding: 50px 8%;
-background: #f8fafc;
+.destaques {
+  padding: 50px 8%;
+  background: #f8fafc;
 }
 
 .card {
-padding: 24px;
-margin-bottom: 20px;
-border: 1px solid #dddddd;
-border-radius: 12px;
-background: white;
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  background: white;
 }
 
 .card h3 {
-margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .card-conteudo p {
-margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
-.caixa{
+.caixa {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
   width: 150px;
+}
+
+.footer {
+  padding:10px 10px;
+
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  
+  display: flex;
+  flex-direction: column;
+  /* Garante que as tags fiquem uma embaixo da outra */
+  align-items: center;
+  /* Centraliza horizontalmente */
+  text-align: center;
+  /* Garante o alinhamento do texto em si */
 }
