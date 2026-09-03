@@ -1,3 +1,4 @@
+
 function Banner() {
     return (
         <section className="banner">
