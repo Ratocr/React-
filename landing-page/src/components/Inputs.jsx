@@ -2,7 +2,7 @@
 function Input({id, label, tipo, placeholder}) {
   return (
     <div className="campo">
-      <label htmlFor={nome}>{label}</label>
+      <label htmlFor={id}>{label}</label>
 
       <input 
       type={tipo} 
