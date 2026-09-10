@@ -1,30 +1,28 @@
-
-import './App.css'
-import Benefícios from './components/Beneficios'
-import Formulario from './components/Formulario'
-import Header from './components/Header'
-import Hero from './components/Hero'
+import "./App.css";
+import Benefícios from "./components/Beneficios";
+import Footer from "./components/Footer";
+import Formulario from "./components/Formulario";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
-  
-
   return (
     <>
-    <Header/>
+      <Header />
 
-    <Hero
-    titulo= 'Aprenda progração do zero'
-    descricao= 'Um curso para quem quer começar na tecnologia'
-    botao = 'Quero começar'
-    />
+      <Hero
+        titulo="Aprenda progração do zero"
+        descricao="Um curso para quem quer começar na tecnologia"
+        botao="Quero começar"
+      />
 
-    <Benefícios/>
-    <Formulario/>
+      <Benefícios />
 
-    
-    
+      <Formulario />
+      
+      <Footer/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

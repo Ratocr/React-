@@ -1,6 +1,6 @@
 function Card({titulo,children}){
     return(
-        <div>
+        <div className="card">
             <h3>{titulo}</h3>
 
             <div className="card-conteudo">

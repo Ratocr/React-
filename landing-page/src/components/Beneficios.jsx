@@ -3,7 +3,9 @@ import Card from "./Card";
 function Benefícios() {
   return (
     <section className="beneficios" id="beneficios">
+        <h2>Por que estudar conosco ? </h2>
       <div className="cards">
+      
         <Card titulo="Aulas práticas">
           <p>Aprender construindo pequenos projetos</p>
         </Card>

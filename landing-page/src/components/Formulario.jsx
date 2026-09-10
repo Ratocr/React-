@@ -1,4 +1,4 @@
-import Input from "./Inputs";
+import Input from "./Input";
 
 function Formulario() {
   return (
