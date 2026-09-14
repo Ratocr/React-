@@ -23,7 +23,7 @@ function Depoimento(){
             </Card>
 
             <Card titulo = "Pedro">
-                <p>Graças a codeSTART consegui mudar de áre.</p>
+                <p>Graças a codeSTART consegui mudar de área.</p>
                 <p>★★★★★</p>
 
             </Card>
