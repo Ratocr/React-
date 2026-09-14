@@ -1,5 +1,7 @@
 import "./App.css";
 import Benefícios from "./components/Beneficios";
+import Contato from "./components/Contato";
+import Depoimento from "./components/Depoimentos";
 import Footer from "./components/Footer";
 import Formulario from "./components/Formulario";
 import Header from "./components/Header";
@@ -19,6 +21,10 @@ function App() {
       <Benefícios />
 
       <Formulario />
+      
+      <Depoimento/>
+
+      <Contato/>
       
       <Footer/>
     </>
