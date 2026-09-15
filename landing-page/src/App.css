@@ -45,14 +45,15 @@
     border-radius: 6px;
     background-color: white;
     color: #2563eb;
+    cursor: pointer;
     font-weight: bold;
 }
 
-/* .hero-imagem{
+.hero-imagem{
 width: 1000px;
 max-width: 100%;
 border-radius: 10px;
-} */
+}
 
 .img-content {
     background-image: url("https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?auto=format&fit=crop&w=1200&q=80");
@@ -108,7 +109,7 @@ border-radius: 10px;
     text-align: center;
 }
 
-.form{
+.contato form{
     max-width: 500px;
     margin: 30px auto 0;
 }
@@ -142,6 +143,7 @@ form button{
     border: none;
     border-radius: 6px;
     background-color: #2563eb;
+    cursor: pointer;
     color: white;
 }
 
@@ -151,4 +153,32 @@ form button{
     text-align: center;
     background-color: #111827;
     color: white;
+}
+
+.entre-contato {
+    margin-top: 15px;
+  padding: 60px 8%;
+  background: white;
+}
+
+.entre-contato h2 {
+  text-align: center;
+}
+
+.entre-contato form {
+  max-width: 500px;
+  margin: 30px auto 0;
+}
+
+.entre-contato button {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #2563eb;
+  color: white;
+
+  cursor: pointer;
 }
