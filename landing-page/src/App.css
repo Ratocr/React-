@@ -183,87 +183,27 @@ form button{
   cursor: pointer;
 }
 
-.resumo-curso{
+.dados-curso{
     padding: 20px ;
     text-align: center;
     color: black;
 }
 
-.resumo-curso h2{
+.dados-curso h2{
     margin-top: 0px;
     margin-bottom: 10px;
     font-size: 40;
     
 }
-
-.resumo-curso p{
-    margin-bottom: 10px;
-}
-
-.status-curso{
-    padding: 20px ;
-    text-align: center;
-    color: black;
-}
-
-.status-curso h2{
-    margin-top: 0px;
+.dados-curso h3{
+    margin-top: 15px;
     margin-bottom: 10px;
     font-size: 40;
     
 }
 
-.status-curso p{
-    margin-bottom: 10px;
+.dados-curso p{
+   display: flex;
+   justify-content: center;
 }
 
-.status-inscricao{
-    padding: 20px ;
-    text-align: center;
-    color: black;
-}
-
-.status-inscricao h2{
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 40;
-    
-}
-
-.status-inscricao p{
-    margin-bottom: 10px;
-}
-
-.verificar{
-    padding: 20px ;
-    text-align: center;
-    color: black;
-}
-
-.verificar h2{
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 40;
-    
-}
-
-.verificar p{
-    margin-bottom: 10px;
-}
-
-.disponibilidade{
-    padding: 20px ;
-    text-align: center;
-    color: black;
-}
-
-.disponibilidade h2{
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 40;
-    
-}
-
-.disponibilidade p{
-    margin-bottom: 10px;
-}

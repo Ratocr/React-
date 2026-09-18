@@ -1,108 +1,94 @@
-// 1- 
-// let idade = 1
-// function verificarIdade(idade){
-//     if (idade >= 18) {
-//         return 'Vocé é maior de idade'
-//     }else{
-//         return 'Você é menor '
-//     }
-// }
+// const linguagens = [
+//     'python',
+//     'java',
+//     'js',
+//     'C',
+//     'C++',
+//     'C#'
+// ]
 
-// console.log(verificarIdade(idade))
+// console.log(linguagens[0])
+// console.log(linguagens[2])
+// console.log(linguagens[4])
 
-// let numero = -10
+// const tecnologias = [
+//     'SkyAlign',
+//     'EcoPivot',
+//     'TerraGrid',
+//     'HelioTrack'
+// ]
 
-// 2-
-// function verificarNumero (numero){
-//     if (numero >= 0) {
-//         return 'Positivo'
-//     } else
-//         return 'Negativo'
-// }
+// console.log(tecnologias.length)
 
-// console.log(verificarNumero(numero))
+const produto = {
+    nome: 'Café',
+    preco: 24.90,
+    categoria: 'bebidas',
+    estoque: 5,
+    disponivel: true
+}
 
-// 3-
-// let number = 2020
-// function calcularDobro(number){
-//     return number * 2
-// }
+produto.preco = 18
+produto.promocao = 14
 
-// console.log(calcularDobro(number))
+console.log(produto)
 
-// 4-
-// let idade = 18
-// let inscrito =  false
+// const nome = [
+//     'Mario',
+//     'Zelda',
+//     'Ash'
+// ]
 
-// function acessoAoEvento(idade, inscrito){
-//     if(idade >= 18 && inscrito){
-//         return 'Acesso liberado'
-//     } else {
-//         return  'Acesso negado'
-//     }
-// }
+// nome.push('Link')
+// console.log(nome)
+// nome.pop()
+// console.log(nome)
 
-// console.log(acessoAoEvento(idade,inscrito))
 
-// 5-
-// let nota = 10
-// function situacao(nota){
-//     if(nota >= 9){
-//         return 'Exelente'
-//     }else if (nota >= 6){
-//         return 'Aprovado'
-//     }else{
-//         return 'Reprovado'
-//     }
-// }
+const objeto= [
+{
+    nome: 'Maça',
+    preco: 2.99,
+    categoria: 'fruta'
+},
 
-// console.log (situacao(nota))
+{
+    nome: 'Laranja',
+    preco: 5.00,
+    categoria: 'fruta'
+},
 
-// 6-
-// let preco = 20
-// let desconto = 10
+{
+    nome: 'Alface',
+    preco: 1.99,
+    categoria: 'folhagem'
+}
+]
 
-// function ValorComDesconto(preco,desconto){
-//     return (preco * desconto)/100
-// }
+console.log(objeto[0].nome,objeto[1].preco)
 
-// console.log(` o desconto será de R$ ${ValorComDesconto(preco,desconto)}`)
+const turma = {
+    nome: 'ADS',
+    turno: 'Noturno',
+    alunos: ['Pedro','Ana','Jao','Luiz']
+}
+console.log(turma.nome,turma.turno,turma.alunos[0])
+console.log(turma.alunos[0,3])
 
-// 7-
-// let quantidade = 0
-// function quantidadeEstoque(quantidade){
-//     if (quantidade === 0){
-//         return 'Sem estoque'
-//     } else if (quantidade >= 1 && quantidade <= 5){
-//         return 'Estoque baixo'
-//     } else {
-//         return 'Estoque disponível '
-//     }
-// }
+const curso = [
+    {
+        nome: 'ADS',
+        cargaHoraria: 120
+    },
+    {
+        nome: 'Tecnico',
+        cargaHoraria: 80
+    },
+    {
+        nome: 'nutricao',
+        cargaHoraria: 240
+    }
+]
 
-// console.log(quantidadeEstoque(quantidade))
-
-// 8-
-// let valorCompra = 100
-// function compra(valorCompra){
-//     if(valorCompra >= 150){
-//         return 'Frete grátis'
-//     } else{
-//         return 'Calcular frete'
-//     }
-// }
-
-// console.log(compra(valorCompra))
-
-// 9
-// let saldo = 120
-// function saldoCompra(saldo,valorCompra){
-//     if (saldo >= valorCompra){
-//         return saldo - valorCompra
-//     } else{
-//         return 'Saldo insuficiente'
-//     }
-// }
-
-// console.log(saldoCompra(saldo,valorCompra))
+console.log(curso[2].cargaHoraria)
 
