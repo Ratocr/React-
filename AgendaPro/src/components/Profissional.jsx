@@ -26,7 +26,7 @@ function Profissional({profissional}) {
         <p>{profissao}</p>
         <p>{cidade}</p>
         <p>{verificarOnline(atendeOnline)}</p>
-        <p>{verificarPresencial(atendePresencial)}</p>
+        <p>{verificarPresencial(atendePresencial)} </p>
     </section>
   )
 }
