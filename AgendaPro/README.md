@@ -1,16 +1,30 @@
-# React + Vite
+# AgendaPro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini projeto React para consolidar os conteúdos vistos até a Aula 11.
 
-Currently, two official plugins are available:
+## Conteúdos praticados
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Componentes
+- JSX
+- Props
+- children
+- Funções
+- Condicionais
+- Arrays
+- Objetos
+- Destructuring
+- Spread Operator
 
-## React Compiler
+O projeto não usa `map()`, `useState`, eventos, API ou CRUD.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Como executar
 
-## Expanding the ESLint configuration
+Abra o terminal na pasta do projeto e execute:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+A pasta `node_modules` não está incluída neste arquivo.
+Ela será criada automaticamente pelo `npm install`.
