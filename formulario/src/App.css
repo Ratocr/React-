@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: min(700px, 90%);
+  margin: 40px auto;
+}
+
+.container h1 {
+  text-align: center;
+  color: #ff7a00;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 12px;
+  background: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #444444;
+  border-radius: 8px;
+}
+
+.formulario textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formulario button {
+  margin-top: 8px;
+  padding: 12px;
+  background: #ff7a00;
+  color: #111111;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-dados {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+}
