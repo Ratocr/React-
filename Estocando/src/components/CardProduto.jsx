@@ -3,6 +3,17 @@ import { useState } from "react";
 function CardProduto({ produto }) {
   const [quantidade, setQuantidade] = useState(produto.quantidade);
 
+    function estatusEstoque(){
+      if(quantidade === 0){
+        return <span className="estoque-vazio">Sem estoque </span>
+      
+      }
+
+      if(quantidade <= 5 ){
+        return <span className="estoque-baixo">Estoque baixo</span>
+      }
+    }
+
   function aumentar() {
     setQuantidade(quantidade + 1);
   }
@@ -19,8 +30,12 @@ function CardProduto({ produto }) {
         <h3>{produto.nome}</h3>
         <p>Categoria: {produto.categoria}</p>
         <p>Quantidade:{quantidade}</p>
+      
+      
+      <div className="status-estoque">
+          {estatusEstoque()}
+        </div>
 
-       
       </div>
 
       <div className="controle">
@@ -30,6 +45,10 @@ function CardProduto({ produto }) {
 
         <button onClick={aumentar}>
           + 
+        </button>
+
+        <button>
+          Excluir
         </button>
       </div>
     </div>

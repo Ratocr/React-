@@ -65,7 +65,7 @@ function Formulario({adicionarProdutos, produtos}) {
         type="number"
         id="quantidade"
         value={quantidade}
-        onChange={(e) =>Number(e.target.value)>= 1 ? setQuantidade(e.target.value) : alert('Valor inválido')}
+        onChange={(e) =>Number(e.target.value)>= 0 ? setQuantidade(e.target.value) : alert('Valor inválido')}
         placeholder="Ex.: 10"
         required
       />

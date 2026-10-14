@@ -179,3 +179,24 @@ header p {
   background-color: #f1f5f9;
   border-color: #94a3b8;
 }
+
+.status-estoque {
+  margin-top: 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.estoque-vazio {
+  color: #dc3545; /* Vermelho */
+  background-color: #fde8e8;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.estoque-baixo {
+  color: #fd7e14; /* Laranja */
+  background-color: #fff4e6;
+  padding: 4px 8px;
+  border-radius: 4px;
+
+}

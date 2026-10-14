@@ -4,6 +4,7 @@ import CardProduto from "./CardProduto";
 function ListaProdutos({ produtos,index }) {
  
   const [categoriaFiltro, setCategoriaFiltro] = useState("Todas");
+  const [pesquisa, setPesquisa] = useState("")
 
   return (
     <section className="card">
@@ -25,10 +26,25 @@ function ListaProdutos({ produtos,index }) {
         </div>
       </div>
 
+      <input type="text"
+      placeholder="Pesquisa"
+      value={pesquisa}
+      onChange={(e) => setPesquisa(e.target.value)}
+       />
+
+       <button>Pesquisar</button>
+
+       
+
       {produtos.length === 0 && <p className="mensagem-vazia">Nenhum produto cadastrado.</p>}
 
 
       <div>
+        {produtos
+        .filter((produto) =>{
+          return produto.nome.toLowerCase().includes(pesquisa.toLowerCase())
+        })}
+
        {produtos
           .filter((produto) => {
             if (categoriaFiltro === "Todas") {
@@ -37,6 +53,7 @@ function ListaProdutos({ produtos,index }) {
               return produto.categoria === categoriaFiltro; 
             }
           })
+
           .map((produto) => (
             <CardProduto key={index} produto={produto} />
           ))}
