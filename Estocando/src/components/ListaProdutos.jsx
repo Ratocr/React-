@@ -1,10 +1,11 @@
 import { useState } from "react";
 import CardProduto from "./CardProduto";
 
-function ListaProdutos({ produtos,index }) {
+function ListaProdutos({ produtos,index, excluir}) {
  
   const [categoriaFiltro, setCategoriaFiltro] = useState("Todas");
   const [pesquisa, setPesquisa] = useState("")
+  
 
   return (
     <section className="card">
@@ -43,9 +44,9 @@ function ListaProdutos({ produtos,index }) {
         {produtos
         .filter((produto) =>{
           return produto.nome.toLowerCase().includes(pesquisa.toLowerCase())
-        })}
+        })
 
-       {produtos
+     
           .filter((produto) => {
             if (categoriaFiltro === "Todas") {
               return true; 
@@ -55,7 +56,7 @@ function ListaProdutos({ produtos,index }) {
           })
 
           .map((produto) => (
-            <CardProduto key={index} produto={produto} />
+            <CardProduto key={index} produto={produto} excluir={excluir} />
           ))}
       </div>
     </section>

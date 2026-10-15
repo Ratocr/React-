@@ -12,6 +12,11 @@ function App() {
     setProdutos([...produtos, novoProduto]);
   }
 
+  function deletarProduto(nomeDoProduto){
+    const novaLista = produtos.filter((produto) => produto.nome.trim()!== nomeDoProduto)
+    setProdutos(novaLista)
+  }
+
   return (
     <div className="app">
       <Header 
@@ -19,7 +24,7 @@ function App() {
         resumo="Cadastro de produtos" 
       />  
       <Formulario adicionarProdutos={adicionarProduto} produtos={produtos} />
-      <ListaProdutos produtos={produtos} />
+      <ListaProdutos produtos={produtos} excluir ={deletarProduto}/>
     </div>
   );
 }

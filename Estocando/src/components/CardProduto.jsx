@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CardProduto({ produto }) {
+function CardProduto({ produto,excluir }) {
   const [quantidade, setQuantidade] = useState(produto.quantidade);
 
     function estatusEstoque(){
@@ -12,6 +12,10 @@ function CardProduto({ produto }) {
       if(quantidade <= 5 ){
         return <span className="estoque-baixo">Estoque baixo</span>
       }
+    }
+
+    function deletar(){
+      excluir(produto.nome)
     }
 
   function aumentar() {
@@ -47,7 +51,7 @@ function CardProduto({ produto }) {
           + 
         </button>
 
-        <button>
+        <button onClick={deletar} className="btn-excluir">
           Excluir
         </button>
       </div>
