@@ -55,10 +55,7 @@ body {
   border: 2px solid #e1f5fe;
 }
 
-.rick-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
+
 
 /* Imagem do personagem */
 .rick-card img {
@@ -92,4 +89,87 @@ body {
 .rick-card p::before {
   font-weight: 600;
   color: #666;
+}
+
+
+/* Área dos detalhes */
+.detalhes {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 20px 30px;
+}
+
+/* Card de detalhes */
+.detalhes-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  border: 2px solid #e1f5fe;
+}
+
+Imagem do personagem
+.detalhes-card img {
+  width: 45%;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+/* Informações */
+.detalhes-info {
+  flex: 1;
+  padding: 25px;
+}
+
+.detalhes-info h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0 0 20px;
+}
+
+/* Textos */
+.detalhes-info p {
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 12px 5px;
+  color: #444;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* Botão voltar */
+.voltar {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.voltar:hover {
+  background-color: #218838;
+}
+
+.rick-card a {
+  align-self: center;
+}
+
+.verDetalhes {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
 }
