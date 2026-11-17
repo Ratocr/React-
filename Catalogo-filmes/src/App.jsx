@@ -7,14 +7,14 @@ function App() {
   const [genero, setGenero] = useState("");
   const [ano, setAno] = useState("");
   const [nota, setNota] = useState("");
-  const [imagem, setImagem] = useState("");
-  const [editandoId, setEditandoId] = useState("null");
+  const [url, setUrl] = useState("");
+  const [editandoId, setEditandoId] = useState(null);
 
   const [filmes, setFilmes] = useState([
     {
       id: 1,
       titulo: "Interestelar",
-      genero: ["Ficção Científica, Aventura, Drama"],
+      genero: "Ficção Científica, Aventura, Drama",
       ano: 2014,
       nota: 8.7,
       url: "https://www.themoviedb.org/t/p/w600_and_h900_face/tR1XVa5bxgdh2bRw2u0DzrgkO2l.jpg",
@@ -32,11 +32,13 @@ function App() {
   function salvarFilme(event) {
     event.preventDefault();
 
+   
+
     if (
       titulo.trim() === "" ||
       genero.trim() === "" ||
-      nota.trim() === "" ||
-      ano.trim() === ""
+      nota === "" ||
+      ano === ""
     ) {
       return;
     }
@@ -48,9 +50,9 @@ function App() {
             ...filme,
             titulo: titulo,
             genero: genero,
-            ano: ano,
-            nota: nota,
-            url: imagem,
+            ano:Number(ano),
+            nota:Number(nota),
+            url: url,
           };
         }
         return filme;
@@ -61,18 +63,18 @@ function App() {
       setTitulo("");
       setGenero("");
       setAno("");
-      setnota("");
-      setImagem("");
+      setNota("");
+      setUrl("");
       return;
     }
 
     const novoFilme = {
-      id: Date.now,
+      id: Date.now(),
       titulo: titulo,
       genero: genero,
       ano: Number(ano),
       nota: Number(nota),
-      url: imagem,
+      url: url,
     };
 
     setFilmes([...filmes, novoFilme]);
@@ -80,11 +82,11 @@ function App() {
     setTitulo("");
     setGenero("");
     setAno("");
-    setnota("");
-    setImagem("");
+    setNota("");
+    setUrl("");
   }
 
-  function filmesApagados() {
+  function filmesApagados(id) {
     const filmesAtulizados = filmes.filter((filme) => filme.id !== id);
 
     setFilmes(filmesAtulizados);
@@ -96,7 +98,7 @@ function App() {
     setGenero(filme.genero);
     setAno(filme.ano);
     setNota(filme.nota);
-    setImagem(filme.imagem);
+    setUrl(filme.url);
   }
 
   return (
@@ -126,16 +128,16 @@ function App() {
 
         <input
           type="text"
-          placeholder="nota"
+          placeholder="Nota"
           value={nota}
           onChange={(e) => setNota(e.target.value)}
         />
 
         <input
           type="url"
-          placeholder="Cole a URL da imagem aqui"
-          value={imagem}
-          onChange={(e) => setImagem(e.target.value)}
+          placeholder="Cole a URL da url aqui"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
         />
 
         <button type="submit">Enviar</button>
