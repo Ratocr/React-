@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { FiHome, FiBox, FiLogOut } from "react-icons/fi";
+import Produtos from "./Produtos";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ function Dashboard() {
         <div className="resumo">
           <article>
             <span>Produtos</span>
-            <strong>6</strong>
+            <strong>{Produtos.length}</strong>
           </article>
 
           <article>
