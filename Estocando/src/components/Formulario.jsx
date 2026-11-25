@@ -1,41 +1,41 @@
 import { useState } from "react";
 
-function Formulario({adicionarProdutos, produtos}) {
+function Formulario({ adicionarProdutos, produtos }) {
   const [nome, setNome] = useState("");
   const [categoria, setCategoria] = useState("");
   const [quantidade, setQuantidade] = useState("");
 
-  function enviarFormulario(e) {
-    e.preventDefault();
 
-    if(produtos){
-      const produtoExistente = produtos.some(
-        (produto) => produto.nome.trim().toLowerCase() === nome.trim().toLowerCase()
-      )
+    const produtoExistente = produtos.some(
+      (produto) =>
+        produto.nome.trim().toLowerCase() === nome.trim().toLowerCase()
+    );
 
-      if (produtoExistente) {
-        alert('Este produto ja foi adicionado!')
-          return
-        
-      }
+    if (produtoExistente) {
+      alert("Este produto já foi adicionado!");
+      return;
+    }
+
+    if (!categoria) {
+      alert("Selecione uma categoria!");
+      return;
     }
 
     const novoProduto = {
-        nome :nome,
-        categoria : categoria,
-        quantidade: Number(quantidade)
-    }
+      nome: nome.trim(),
+      categoria: categoria,
+      quantidade: Number(quantidade),
+    };
 
-    adicionarProdutos(novoProduto)
-    
+    adicionarProdutos(novoProduto);
+
     setNome("");
-    setCategoria("disable");
+    setCategoria("");
     setQuantidade("");
   }
 
-
   return (
-    <form className="formulario" onSubmit={enviarFormulario}>
+    <form className="formulario">
       <h2>Cadastrar produto</h2>
 
       <label htmlFor="nome">Nome do produto</label>
@@ -53,8 +53,9 @@ function Formulario({adicionarProdutos, produtos}) {
         id="categoria"
         value={categoria}
         onChange={(e) => setCategoria(e.target.value)}
+        required
       >
-        <option value="disable">Selecione uma categoria</option>
+        <option value="">Selecione uma categoria</option>
         <option value="Informática">Informática</option>
         <option value="Móveis">Móveis</option>
         <option value="Eletrônicos">Eletrônicos</option>
@@ -64,17 +65,16 @@ function Formulario({adicionarProdutos, produtos}) {
       <input
         type="number"
         id="quantidade"
+        min="0"
         value={quantidade}
-        onChange={(e) =>Number(e.target.value)>= 0 ? setQuantidade(e.target.value) : alert('Valor inválido')}
+        onChange={(e) => setQuantidade(e.target.value)}
         placeholder="Ex.: 10"
         required
       />
 
-      
-
       <button type="submit">Cadastrar produto</button>
     </form>
   );
-}
+
 
 export default Formulario;

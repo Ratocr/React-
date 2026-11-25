@@ -1,19 +1,30 @@
 import { useState } from "react";
 import CardProduto from "./CardProduto";
 
-function ListaProdutos({ produtos,index, excluir}) {
- 
+function ListaProdutos({ produtos, excluir, alterarQuantidade }) {
   const [categoriaFiltro, setCategoriaFiltro] = useState("Todas");
-  const [pesquisa, setPesquisa] = useState("")
-  
+  const [pesquisa, setPesquisa] = useState("");
+
+  const produtosFiltrados = produtos
+    .filter((produto) =>
+      produto.nome.toLowerCase().includes(pesquisa.toLowerCase())
+    )
+    .filter((produto) => {
+      if (categoriaFiltro === "Todas") {
+        return true;
+      }
+
+      return produto.categoria === categoriaFiltro;
+    });
 
   return (
     <section className="card">
       <div className="subTitulo">
         <h2>Produtos cadastrados</h2>
 
-            <div className="filtro">
-          <label htmlFor="filtro-categoria">Filtrar: </label>
+        <div className="filtro">
+          <label htmlFor="filtro-categoria">Filtrar:</label>
+
           <select
             id="filtro-categoria"
             value={categoriaFiltro}
@@ -27,37 +38,34 @@ function ListaProdutos({ produtos,index, excluir}) {
         </div>
       </div>
 
-      <input type="text"
-      placeholder="Pesquisa"
-      value={pesquisa}
-      onChange={(e) => setPesquisa(e.target.value)}
-       />
+      <input
+        type="text"
+        placeholder="Pesquisar produto"
+        value={pesquisa}
+        onChange={(e) => setPesquisa(e.target.value)}
+      />
 
-       <button>Pesquisar</button>
+      {produtos.length === 0 && (
+        <p className="mensagem-vazia">
+          Nenhum produto cadastrado.
+        </p>
+      )}
 
-       
-
-      {produtos.length === 0 && <p className="mensagem-vazia">Nenhum produto cadastrado.</p>}
-
+      {produtos.length > 0 && produtosFiltrados.length === 0 && (
+        <p className="mensagem-vazia">
+          Nenhum produto encontrado.
+        </p>
+      )}
 
       <div>
-        {produtos
-        .filter((produto) =>{
-          return produto.nome.toLowerCase().includes(pesquisa.toLowerCase())
-        })
-
-     
-          .filter((produto) => {
-            if (categoriaFiltro === "Todas") {
-              return true; 
-            } else {
-              return produto.categoria === categoriaFiltro; 
-            }
-          })
-
-          .map((produto) => (
-            <CardProduto key={index} produto={produto} excluir={excluir} />
-          ))}
+        {produtosFiltrados.map((produto) => (
+          <CardProduto
+            key={produto.id}
+            produto={produto}
+            excluir={excluir}
+            alterarQuantidade={alterarQuantidade}
+          />
+        ))}
       </div>
     </section>
   );

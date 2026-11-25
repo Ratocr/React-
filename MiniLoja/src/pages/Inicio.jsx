@@ -8,7 +8,7 @@ function Inicio({produtos}) {
     <article key={produto.id}>
         <img src={produto.imagem} alt={produto.nome} />
         <h1>{produto.nome}</h1>
-        <p><strong>Preço: </strong>{produto.preco}</p>
+        <p><strong>Preço: </strong>{produto.preco.toFixed(2)}</p>
 
         <Link to={`/produto/${produto.id}`}> Ver detalhes</Link>
 

@@ -16,7 +16,7 @@ function DetalhesDoProduto({produtos}) {
     <img src={produtosEncontrado.imagem} alt={produtosEncontrado.nome} />
     <h1>{produtosEncontrado.nome}</h1>
     <p><strong>ID: </strong>{produtosEncontrado.id}</p>
-    <p><strong>Preço: </strong>{produtosEncontrado.preco}</p>
+    <p><strong>Preço: </strong>{produtosEncontrado.preco.toFixed(2)}</p>
     <p><strong>Categoria: </strong>{produtosEncontrado.categoria}</p>
     <p><strong>Descrição</strong>{produtosEncontrado.descricao}</p>
 

@@ -1,0 +1,413 @@
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f7f8f5;
+  color: #333d36;
+  font-family: Arial, sans-serif;
+}
+
+/* =================================
+   MENU SUPERIOR
+================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8ece8;
+}
+
+.navbar h1 {
+  color: #315f4b;
+  font-size: 24px;
+  margin: 0;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-links a {
+  color: #555f58;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #315f4b;
+}
+
+/* =================================
+   PÁGINA INICIAL
+================================= */
+
+.inicio {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+.inicio h1 {
+  color: #315f4b;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.inicio h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.inicio > p {
+  color: #737c75;
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+/* =================================
+   CARDS DE RESUMO
+================================= */
+
+.resumo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.resumo article {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e8ece8;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.resumo article p {
+  color: #737c75;
+  margin: 0;
+  font-size: 15px;
+}
+
+.resumo article strong {
+  display: block;
+  color: #315f4b;
+  font-size: 26px;
+  margin-top: 12px;
+}
+
+/* =================================
+   BOTÃO DA PÁGINA INICIAL
+================================= */
+
+.menu a {
+  display: inline-block;
+  background-color: #315f4b;
+  color: #ffffff;
+  padding: 13px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.menu a:hover {
+  background-color: #254936;
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .inicio {
+    padding: 35px 20px;
+  }
+
+  .resumo {
+    grid-template-columns: 1fr;
+  }
+
+  .inicio h1 {
+    font-size: 27px;
+  }
+
+  .inicio h2 {
+    font-size: 23px;
+  }
+}
+
+
+/* =================================
+   PÁGINA DE VIAGENS
+================================= */
+
+.minhaViagens {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 45px 30px;
+}
+
+.minhaViagens h1 {
+  color: #315f4b;
+  font-size: 30px;
+}
+
+/* FORMULÁRIO */
+
+.viagens {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e8ece8;
+  margin-bottom: 35px;
+}
+
+.viagens input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce3dd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.viagens input:focus {
+  border-color: #315f4b;
+}
+
+.viagens button {
+  background: #315f4b;
+  color: #ffffff;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.viagens button:hover {
+  background: #254936;
+}
+
+/* CARDS DAS VIAGENS */
+
+.viagens-cadastradas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.viagens-cadastradas article {
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #e8ece8;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.viagens-cadastradas article h2 {
+  color: #315f4b;
+  margin-top: 0;
+}
+
+.viagens-cadastradas article p {
+  color: #737c75;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+  .minhaViagens {
+    padding: 30px 20px;
+  }
+
+  .viagens,
+  .viagens-cadastradas {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =================================
+   PÁGINA DE DETALHES
+================================= */
+
+.detalhes-viagem {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+.detalhes-viagem h1 {
+  color: #315f4b;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.detalhes-viagem .subtitulo {
+  color: #737c75;
+  margin-bottom: 30px;
+}
+
+.detalhes-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e8ece8;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.detalhes-card h2 {
+  color: #315f4b;
+  font-size: 26px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.detalhes-card p {
+  color: #737c75;
+  font-size: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf0ed;
+}
+
+.detalhes-card strong {
+  color: #333d36;
+}
+
+.detalhes-voltar {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 22px;
+  background-color: #315f4b;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.detalhes-voltar:hover {
+  background-color: #254936;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+  .detalhes-viagem {
+    padding: 30px 20px;
+  }
+
+  .detalhes-card {
+    padding: 22px;
+  }
+
+  .detalhes-viagem h1 {
+    font-size: 26px;
+  }
+}
+
+
+/* =================================
+   AÇÕES DOS CARDS DE VIAGENS
+================================= */
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* BOTÃO VER DETALHES */
+
+.botao-detalhes {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #315f4b;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.botao-detalhes:hover {
+  background-color: #254936;
+}
+
+/* BOTÃO EXCLUIR */
+
+.botao-excluir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #fff1f0;
+  color: #c0392b;
+  border: 1px solid #f3d0cc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao-excluir:hover {
+  background-color: #fce0dd;
+}
+
+
+.botao-editar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: #e8f0eb;
+  color: #315f4b;
+  border: 1px solid #cbdacf;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.botao-editar:hover {
+  background-color: #d5e5da;
+}
+
+/* css foi criado com ajuda de IA  */
+

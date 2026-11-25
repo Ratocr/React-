@@ -1,31 +1,15 @@
-import { useState } from "react";
+function CardProduto({ produto, excluir, alterarQuantidade }) {
 
-function CardProduto({ produto,excluir }) {
-  const [quantidade, setQuantidade] = useState(produto.quantidade);
-
-    function estatusEstoque(){
-      if(quantidade === 0){
-        return <span className="estoque-vazio">Sem estoque </span>
-      
-      }
-
-      if(quantidade <= 5 ){
-        return <span className="estoque-baixo">Estoque baixo</span>
-      }
+  function estatusEstoque() {
+    if (produto.quantidade === 0) {
+      return <span className="estoque-vazio">Sem estoque</span>;
     }
 
-    function deletar(){
-      excluir(produto.nome)
+    if (produto.quantidade <= 5) {
+      return <span className="estoque-baixo">Estoque baixo</span>;
     }
 
-  function aumentar() {
-    setQuantidade(quantidade + 1);
-  }
-
-  function diminuir() {
-    if (quantidade > 0) {
-      setQuantidade(quantidade - 1);
-    }
+    return <span className="estoque-normal">Estoque normal</span>;
   }
 
   return (
@@ -33,25 +17,30 @@ function CardProduto({ produto,excluir }) {
       <div>
         <h3>{produto.nome}</h3>
         <p>Categoria: {produto.categoria}</p>
-        <p>Quantidade:{quantidade}</p>
-      
-      
-      <div className="status-estoque">
+        <p>Quantidade: {produto.quantidade}</p>
+
+        <div className="status-estoque">
           {estatusEstoque()}
         </div>
-
       </div>
 
       <div className="controle">
-        <button onClick={diminuir}>
-          - 
+        <button
+          onClick={() => alterarQuantidade(produto.id, -1)}
+        >
+          -
         </button>
 
-        <button onClick={aumentar}>
-          + 
+        <button
+          onClick={() => alterarQuantidade(produto.id, 1)}
+        >
+          +
         </button>
 
-        <button onClick={deletar} className="btn-excluir">
+        <button
+          onClick={() => excluir(produto.id)}
+          className="btn-excluir"
+        >
           Excluir
         </button>
       </div>

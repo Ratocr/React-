@@ -124,3 +124,6 @@ main:has(> img) img {
   margin-bottom: 25px;
 }
 
+.botoes{
+  padding: 12px;
+}

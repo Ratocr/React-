@@ -2,7 +2,7 @@ import { Link} from 'react-router-dom'
 
 function Menu() {
   return (
-    <nav>
+    <nav className='botoes'>
         <Link to='/'>Produtos</Link>
     </nav>
   )

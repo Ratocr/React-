@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f5f7;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.todo {
+  width: 100%;
+  max-width: 600px;
+}
+
+.todo h1 {
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #111827;
+  color: white;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.tarefa p {
+  margin: 0;
+}
+
+.tarefa > input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+}
+
+.acoes button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+.editar {
+  background-color: #2563eb;
+}
+
+.excluir {
+  background-color: #dc2626;
+}
+
+.salvar {
+  background-color: #16a34a;
+}
+
+.cancelar {
+  background-color: #6b7280;
+}

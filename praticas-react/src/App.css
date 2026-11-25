@@ -54,9 +54,10 @@ header a {
 
 .caixa {
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc ;
   border-radius: 8px;
-  width: 150px;
+  width: 200px;
+  height: 150px;
 }
 
 .footer {
@@ -65,12 +66,8 @@ header a {
   width: 100%;
   box-sizing: border-box;
   margin-top: auto;
-  
   display: flex;
   flex-direction: column;
-  /* Garante que as tags fiquem uma embaixo da outra */
   align-items: center;
-  /* Centraliza horizontalmente */
   text-align: center;
-  /* Garante o alinhamento do texto em si */
 }

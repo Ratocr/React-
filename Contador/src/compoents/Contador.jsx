@@ -10,6 +10,7 @@ const [numero,setNumero] =
 
     function diminuir(){
         setNumero(numero - 1)
+        
     }
 
     function zerar(){

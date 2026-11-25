@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5f7;
+  color: #1f2937;
+}
+
+.app {
+  width: min(100% - 32px, 1000px);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.topo {
+  margin-bottom: 28px;
+}
+
+.tag {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.topo h1 {
+  margin: 8px 0;
+  font-size: 40px;
+}
+
+.lista-pokemons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.pokemon-card {
+  padding: 24px;
+  background: white;
+  border: 1px solid #dbe1e8;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.pokemon-card h2 {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 20px;
+}
